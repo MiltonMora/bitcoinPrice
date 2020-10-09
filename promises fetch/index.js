@@ -1,11 +1,8 @@
 const API = 'https://api.coindesk.com/v1/bpi/currentprice.json';
 
 function bitcoinPrice() {
-    return new Promise((resolve, reject) => {
-        fetch(API).then(res => res.json())
-        .then(respose => resolve(respose))
-        .catch(error => reject(error));
-    })
+    return fetch(API).then(respose => respose.json())
+                    .catch(error => error)
 }
 
 bitcoinPrice().then(function(data) {

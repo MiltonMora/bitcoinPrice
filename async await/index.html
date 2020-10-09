@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        margin: 0px auto 0px auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 20% 30% 50%;
+    }
+    .container > div {
+        margin: 0px 2px 5px 2px;
+        padding: 2%;
+    }
+    .container__time {
+        grid-area: 1 / 1 / 1 / span 3;
+    }
+    .container__disclaimer {
+        grid-area: 2 / 1 / 2 / span 3;
+    }
+    .container__bpi, .container__GBP, .container__EUR {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #00b4d8;
+        border-radius: 25px;
+    }
+    .container > div > h4 {
+        padding: 0px;
+        margin: 0px;
+    }
+    @media only screen and (max-width: 600px) {
+        .container {
+            grid-template: repeat(5, 1fr) / 1fr;
+
+        }
+        .container__time {
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    .container__disclaimer {
+        grid-area: 2 / 1 / 2 / 1;
+    }
+</style>
+<body>
+    <section class="container">
+        <div class="container__time" id="time">
+
+        </div>
+        <div class="container__disclaimer" id="disclaimer">
+
+        </div>
+        <div class="container__bpi" id="bpi">
+            
+        </div>
+        <div class="container__GBP" id="gbp">
+            
+        </div>
+        <div class="container__EUR" id="eur">
+            
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
